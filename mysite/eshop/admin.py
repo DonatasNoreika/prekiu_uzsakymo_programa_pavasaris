@@ -8,6 +8,7 @@ class OrderLineInLine(admin.TabularInline):
 class OrderAdmin(admin.ModelAdmin):
     list_display = ['customer', 'date', 'status']
     inlines = [OrderLineInLine]
+    list_filter = ['status']
 
 # Register your models here.
 admin.site.register(Order, OrderAdmin)
