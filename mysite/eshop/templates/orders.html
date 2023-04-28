@@ -5,7 +5,9 @@
 {% block content %}
 
 {% for order in orders %}
-<p>{{ order }}</p>
+<a href="{% url 'order' order.id %}">
+    <p>{{ order }}</p>
+</a>
 <hr>
 {% endfor %}
 {% endblock %}
