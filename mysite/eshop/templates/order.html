@@ -8,6 +8,8 @@
 <p><strong>Būsena: </strong>{{ order.status }}</p>
 <hr>
 {% for line in order.lines.all %}
-<p>{{ line.product }} ({{ line.product.price }}) - {{ line.qty }} </p>
+<p>{{ line.product }} ({{ line.product.price }}) - {{ line.qty }}: {{ line.suma }} </p>
 {% endfor %}
+<hr>
+<p><strong>Bendra suma: </strong>{{ order.total }}</p>
 {% endblock %}
