@@ -7,11 +7,15 @@ from django.contrib.auth.models import User
 class Status(models.Model):
     name = models.CharField(verbose_name="Pavadinimas", max_length=50)
 
+    def __str__(self):
+        return self.name
 
 class Product(models.Model):
     name = models.CharField(verbose_name="Pavadinimas", max_length=50)
     price = models.FloatField(verbose_name="Kaina")
 
+    def __str__(self):
+        return self.name
 
 class Order(models.Model):
     customer = models.ForeignKey(to=User, verbose_name="Vartotojas", on_delete=models.CASCADE)
