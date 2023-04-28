@@ -28,7 +28,8 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="">Pradžia</a>
+                    <li class="nav-item"><a class="nav-link" href="">Produktai</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Užsakymai</a></li>
                 </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item"><a class="nav-link" href="">
@@ -38,11 +39,10 @@
                               clip-rule="evenodd"/>
                     </svg>
                     {{ user.get_username }}</a></li>
-                <li class="nav-item"><a class="nav-link" href="">Mano užsakymai</a></li>
-                <li class="nav-item"><a class="nav-link" href="">Naujas užsakymas</a></li>
-                <li class="nav-item"><a class="nav-link" href="">Atsijungti</a></li>
+
+<!--                <li class="nav-item"><a class="nav-link" href="">Atsijungti</a></li>-->
                 {% else %}
-                <li class="nav-item"><a class="nav-link" href="">Prisijungti</a></li>
+<!--                <li class="nav-item"><a class="nav-link" href="">Prisijungti</a></li>-->
                 {% endif %}
             </ul>
         </div>
