@@ -28,8 +28,8 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <li class="nav-item"><a class="nav-link" href="{% url 'products' %}">Produktai</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'orders' %}">Užsakymai</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'products' %}">Produktai</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'orders' %}">Užsakymai</a></li>
                 </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item"><a class="nav-link" href="">
@@ -39,7 +39,7 @@
                               clip-rule="evenodd"/>
                     </svg>
                     {{ user.get_username }}</a></li>
-
+                <li class="nav-item"><a class="nav-link" href="{% url 'my_orders' %}">Mano užsakymai</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Atsijungti</a></li>
                 {% else %}
                 <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Prisijungti</a></li>
